@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Citas Médicas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">Sistema de Citas Médicas</h1>
+    
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="section-title">Citas Pendientes</h2>
+        <div class="card">
+          <img src="imagen1.jpg" class="card-img-top" alt="Cita 1">
+          <div class="card-body">
+            <h5 class="card-title">Cita 1</h5>
+            <p class="card-text">Fecha: <span id="fechaCita1"></span></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h2 class="section-title">Agenda Futura</h2>
+        <div class="card">
+          <img src="imagen2.jpg" class="card-img-top" alt="Cita 2">
+          <div class="card-body">
+            <h5 class="card-title">Cita 2</h5>
+            <p class="card-text">Fecha: <span id="fechaCita2"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <h2 class="section-title">Historial Médico del Paciente</h2>
+      <form class="mb-3">
+        <div class="mb-3">
+          <label for="pacienteNombre" class="form-label">Buscar Paciente por Nombre o Número de Expediente Médico</label>
+          <input type="text" class="form-control" id="pacienteNombre" placeholder="Nombre o Número de Expediente Médico">
+        </div>
+        <button type="submit" class="btn btn-primary">Buscar</button>
+      </form>
+
+      <div class="mb-3">
+        <h3>Historial Médico de [Nombre del Paciente]</h3>
+        <!-- Mostrar detalles del historial médico del paciente -->
+      </div>
+
+      <form>
+        <div class="mb-3">
+          <label for="notasMedicas" class="form-label">Notas Médicas</label>
+          <textarea class="form-control" id="notasMedicas" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="diagnostico" class="form-label">Diagnóstico</label>
+          <input type="text" class="form-control" id="diagnostico">
+        </div>
+        <div class="mb-3">
+          <label for="tratamiento" class="form-label">Tratamiento</label>
+          <input type="text" class="form-control" id="tratamiento">
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar Consulta</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
